@@ -17,7 +17,7 @@ for iter = 1:num_iters
     %       of the cost function (computeCostMulti) and gradient here.
     %
 
-    h = sum(theta' .* X, 2);                % '
+    h = X * theta;
     delta = (1/m) * sum((h - y) .* X);
     theta = theta - alpha * delta';         % '
 
